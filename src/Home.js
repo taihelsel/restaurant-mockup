@@ -3,7 +3,7 @@ import './App.css';
 class Home extends Component {
   render() {
     return (
-      <div className="Home">
+      <div id="Home">
         <div>React Home Page</div>
       </div>
     );

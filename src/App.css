@@ -1,0 +1,54 @@
+:root {
+  --black:#2E2E2E;
+  --lightgrey:#d3d3d3;
+}
+
+.App{
+  font-family: 'Roboto Condensed', sans-serif;
+}
+/*Nav Stuff*/
+#Nav{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 5vmax;
+  text-align: right;
+  border-bottom:1px solid var(--black);
+}
+.nav-item{
+  display: inline-block;
+  text-align: center;
+  font-size: 1.5vmax;
+  position: relative;
+  color: var(--black);
+  border-radius: 1px;
+  height: 100%;
+  overflow: hidden;
+}
+.nav-item a{
+  text-decoration: none;
+  position: relative;
+  top: 30%;
+  padding: 2vmax;
+  color: inherit;
+}
+.nav-item:hover{
+  background-color:var(--black);
+  color:white;
+  cursor:pointer;
+}
+.nav-item:last-child{
+  margin-right:8vmax;
+}
+/*Home Page stuff*/
+#Home{
+
+}
+/*Menu Page stuff*/
+#Menu{
+
+}
+/*About Page stuff*/
+#About{
+
+}
