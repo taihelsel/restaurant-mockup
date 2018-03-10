@@ -40,18 +40,17 @@ class Home extends Component {
       },
     }
   }
-  componentDidMount(){
-    const base = this;
+  componentDidMount = () =>{
     const intervalTimer = 2500;
     const mealTypes = ["appsides","entree","soupsalad"];//Holds currently supported meal types
     let i = 0;
-    this.interval = setInterval(function(){
-      const mealIndex = base.random(0,mealTypes.length - 1); 
-      const menuItem1Index = base.random(0,menuData[mealTypes[mealIndex]].length - 1); 
-      const menuItem2Index = base.random(0,menuData[mealTypes[mealIndex]].length - 1); 
+    this.interval = setInterval(()=>{
+      const mealIndex = this.random(0,mealTypes.length - 1); 
+      const menuItem1Index = this.random(1,menuData[mealTypes[mealIndex]].length - 2); 
+      const menuItem2Index = this.random(1,menuData[mealTypes[mealIndex]].length - 2); 
       const menuItem1 = menuData[mealTypes[mealIndex]][menuItem1Index];
-      const menuItem2 = menuData[mealTypes[mealIndex]][menuItem1Index];
-      base.setState({
+      const menuItem2 = menuData[mealTypes[mealIndex]][menuItem2Index];
+      this.setState({
         ["img"+i] : {
           src : "images/"+mealTypes[mealIndex]+"/"+menuItem1Index+".jpeg",
           desc: menuItem1.desc,
@@ -64,7 +63,7 @@ class Home extends Component {
         },
       });
       //console.log(menuItem1);
-      console.log(base.state["img"+i],base.state["img"+(5-i)]);
+      console.log(this.state["img"+i],this.state["img"+(5-i)]);
       if(i >= 5){
         i=0;
       }else{
