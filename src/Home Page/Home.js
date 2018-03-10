@@ -8,7 +8,7 @@ class Home extends Component {
   constructor(props){
     super(props);
     this.state={
-      imageIndexes:[0,0,0,0,0,0],//Keeps record of the currently used images
+      imageIndexes:[7,2,6,9,7,8],//Keeps record of the currently used images
       img0:{
         src : "images/appsides/7.jpeg",
         desc : null,
@@ -75,7 +75,7 @@ class Home extends Component {
     },intervalTimer);
   }
   randomImg = (min,max,y=null,x=null) =>{
-    if(y === x|| y===null || x===null || this.state.imageIndexes.indexOf(y) > -1 || this.state.imageIndexes.indexOf(x) > -1){
+    if(y === x|| y===null || x===null || this.state.imageIndexes.indexOf(y) !== -1 || this.state.imageIndexes.indexOf(x) !== -1){
       return this.randomImg(min,max, Math.floor(Math.random() * max) + min, Math.floor(Math.random() * max) + min);
     }else{
       return [y,x];
