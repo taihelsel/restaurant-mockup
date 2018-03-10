@@ -8,6 +8,7 @@ class Home extends Component {
   constructor(props){
     super(props);
     this.state={
+      imageIndexes:[0,0,0,0,0,0],//Keeps record of the currently used images
       img0:{
         src : "images/appsides/7.jpeg",
         desc : null,
@@ -45,11 +46,15 @@ class Home extends Component {
     const mealTypes = ["appsides","entree","soupsalad"];//Holds currently supported meal types
     let i = 0;
     this.interval = setInterval(()=>{
-      const mealIndex = this.random(0,mealTypes.length - 1)[0]; 
-      const mealItemIndexes = this.random(1,menuData[mealTypes[mealIndex]].length - 2); 
+      const mealIndex = Math.floor(Math.random() * (mealTypes.length-1)) + 0;
+      const mealItemIndexes = this.randomImg(1,menuData[mealTypes[mealIndex]].length - 2); 
       const menuItem1 = menuData[mealTypes[mealIndex]][mealItemIndexes[0]];
       const menuItem2 = menuData[mealTypes[mealIndex]][mealItemIndexes[1]];
+      let newImages = this.state.imageIndexes;
+      newImages[i]=mealItemIndexes[0];
+      newImages[5-i]=mealItemIndexes[1];
       this.setState({
+        imageIndexes:newImages,
         ["img"+i] : {
           src : "images/"+mealTypes[mealIndex]+"/"+mealItemIndexes[0]+".jpeg",
           desc: menuItem1.desc,
@@ -61,8 +66,7 @@ class Home extends Component {
           title:menuItem2.name,
         },
       });
-      //console.log(menuItem1);
-      console.log(this.state["img"+i],this.state["img"+(5-i)]);
+      console.log(this.state.imageIndexes)
       if(i >= 5){
         i=0;
       }else{
@@ -70,9 +74,9 @@ class Home extends Component {
       }
     },intervalTimer);
   }
-  random = (min,max,y=null,x=null) =>{
-    if(y === x|| y===null || x===null){
-      return this.random(min,max, Math.floor(Math.random() * max) + min, Math.floor(Math.random() * max) + min);
+  randomImg = (min,max,y=null,x=null) =>{
+    if(y === x|| y===null || x===null || this.state.imageIndexes.indexOf(y) > -1 || this.state.imageIndexes.indexOf(x) > -1){
+      return this.randomImg(min,max, Math.floor(Math.random() * max) + min, Math.floor(Math.random() * max) + min);
     }else{
       return [y,x];
     }
