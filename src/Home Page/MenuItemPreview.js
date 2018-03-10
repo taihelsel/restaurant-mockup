@@ -4,15 +4,20 @@ class MenuItemPreview extends Component {
     constructor(props){
         super(props);
         this.state = {
-            src : this.props.src,
-            desc : this.props.desc,
-            title : this.props.title,
+            src : this.props.itemData.src,
+            desc : this.props.itemData.desc,
+            title : this.props.itemData.title,
         }
     }
   render() {
+    const previewImgStyle = {
+        backgroundImage:"url("+require(".././"+this.state.src)+")",
+    }
     return (
       <li className="MenuItemPreview">
-        <img src={this.state.src} alt="Menu Item Picture" />
+        <div style={ previewImgStyle } className="home-preview-image"></div>
+        <div className="home-preview-title">{this.state.title}</div>
+        <div className="home-preview-desc">{this.state.desc}</div>
       </li>
     );
   }
