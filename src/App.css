@@ -60,6 +60,14 @@
 #Home{
 
 }
+.home-menu-preview{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+.MenuItemPreview{
+  display:inline-block;
+}
 /*Menu Page stuff*/
 #Menu{
 
