@@ -70,17 +70,19 @@
   list-style:none;
   padding:0;
   margin:0;
-  height:50vmax;
+  height:55vw;
   overflow: hidden;
+  width:100%;
+  display:inline-flex;
 }
 .MenuItemPreview{
-  display: inline-block;
   width: 16.66%;
   height: 100%;
   -webkit-transition: width .2s ease-in-out;
   -o-transition: width .2s ease-in-out;
   transition: width .2s ease-in-out;
   background-color: white;
+  position:relative
 }
 .home-preview-image{
   width: 100%;
@@ -95,10 +97,28 @@
   display: none;
 }
 .home-preview-title{
-
+  position: absolute;
+  font-size: 2vmax;
+  top: 34%;
+  width: 100%;
+  text-align: center;
+  color: snow;
+  text-shadow: 1px 0px #afafaf;
+  border-bottom-style: solid;
+  border-bottom-color: snow;
+  border-bottom-width: 2px;
+  padding-bottom:10px;
+  z-index: 2;
 }
 .home-preview-desc{
-
+  position: absolute;
+  font-size: 1.5vmax;
+  top: 45%;
+  width: 100%;
+  text-align: center;
+  color: snow;
+  text-shadow: 1px 0px #afafaf;
+  z-index: 2;
 }
 .home-preview-image:hover{
   -webkit-filter: blur(3px);
@@ -106,7 +126,13 @@
   -o-filter: blur(3px);
   -ms-filter: blur(3px);
   filter: blur(3px);
-  transform: scale(1.2);
+  transform: scale(1.02);
+}
+.MenuItemPreview:hover{
+  width:23%;
+  cursor: pointer;
+  -webkit-transition: width .2s ease-in-out;
+  transition: width .2s ease-in-out;  
 }
 /*Menu Page stuff*/
 #Menu{

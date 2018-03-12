@@ -51,9 +51,8 @@ class Home extends Component {
       const menuItem1 = menuData[mealTypes[mealIndex]][mealItemIndexes[0]];
       const menuItem2 = menuData[mealTypes[mealIndex]][mealItemIndexes[1]];
       let newImages = this.state.imageIndexes;
-      newImages[i]=mealItemIndexes[0];
-      newImages[5-i]=mealItemIndexes[1];
       if(document.getElementsByClassName("MenuItemPreview")[i].getAttribute("id") !=="hovered-home-preview"){
+        newImages[i]=mealItemIndexes[0];
         this.setState({
           imageIndexes:newImages,
           ["img"+i] : {
@@ -64,6 +63,7 @@ class Home extends Component {
         });
       }
       if(document.getElementsByClassName("MenuItemPreview")[5-i].getAttribute("id") !=="hovered-home-preview"){
+        newImages[5-i]=mealItemIndexes[1];
         this.setState({
           imageIndexes:newImages,
           ["img"+(5-i)] : {
