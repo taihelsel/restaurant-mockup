@@ -52,7 +52,7 @@ class Home extends Component {
       const menuItem2 = menuData[mealTypes[mealIndex]][mealItemIndexes[1]];
       let newImages = this.state.imageIndexes;
       if(document.getElementsByClassName("MenuItemPreview")[i].getAttribute("id") !=="hovered-home-preview"){
-        newImages[i]=mealItemIndexes[0]+1;
+        newImages[i]= (mealItemIndexes[0]+1);
         this.setState({
           imageIndexes:newImages,
           ["img"+i] : {
@@ -63,7 +63,7 @@ class Home extends Component {
         });
       }
       if(document.getElementsByClassName("MenuItemPreview")[5-i].getAttribute("id") !=="hovered-home-preview"){
-        newImages[5-i]=mealItemIndexes[1]+1
+        newImages[5-i]= (mealItemIndexes[1]+1);
         this.setState({
           imageIndexes:newImages,
           ["img"+(5-i)] : {
@@ -81,7 +81,7 @@ class Home extends Component {
     },intervalTimer);
   }
   randomImg = (min,max,y=null,x=null) =>{
-    if(y === x|| y===null || x===null || this.state.imageIndexes.indexOf(y) !== -1 || this.state.imageIndexes.indexOf(x) !== -1){
+    if(y === x|| y===null || x===null || this.state.imageIndexes.indexOf(y+1) !== -1 || this.state.imageIndexes.indexOf(x+1) !== -1){
       return this.randomImg(min,max, Math.floor(Math.random() * max) + min, Math.floor(Math.random() * max) + min);
     }else{
       return [y,x];
