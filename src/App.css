@@ -66,6 +66,21 @@
 #Home{
   margin-top:5vmax;
 }
+.home-text{
+  user-select: none;
+  color:var(--lightgrey);
+  position: absolute;
+  top: 18vmax;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+  font-size: 9vmax;
+  transition: visibility 0s, opacity 0.3s linear;
+  font-family: 'Kaushan Script', cursive;
+  font-weight: bold;
+  text-shadow: 5px 2px #151212a6;
+  visibility:visible;
+}
 .home-menu-preview{
   list-style:none;
   padding:0;

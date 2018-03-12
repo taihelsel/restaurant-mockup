@@ -99,6 +99,7 @@ class Home extends Component {
   render() {
     return (
       <div id="Home">
+        <h1 className="home-text">Authentic Thai Cuisine</h1>
         <ul className="home-menu-preview">
           <MenuItemPreview onMouseOut={this.removeHover} onMouseOver={this.setHover} itemData={this.state.img0}/>
           <MenuItemPreview onMouseOut={this.removeHover} onMouseOver={this.setHover} itemData={this.state.img1} />
