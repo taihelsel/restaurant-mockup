@@ -781,7 +781,7 @@ const menuData = {
             }]
         }]
     }, {
-        name: "Pad Prik Khing",
+        name: "Pad Pik Khing",
         price: "10.00",
         desc: "Stir fried green beans with red curry paste, lime leaves, bell peppers",
         options: [{
@@ -1027,98 +1027,6 @@ const menuData = {
             }]
         }]
     }, {
-        name: "Kao Pad",
-        price: "10.00",
-        desc: "Fried rice, onions, egg, Chinese broccoli, tomatoes",
-        options: [{
-            title: "Protein",
-            optionItems: [{
-                name: "Chicken",
-                cost: 0
-            }, {
-                name: "Pork",
-                cost: 0
-            }, {
-                name: "Beef",
-                cost: 1.50
-            }, {
-                name: "Shrimp",
-                cost: 3.50
-            }, {
-                name: "Tofu",
-                cost: 0
-            }, {
-                name: "No Meat",
-                cost: 0
-            }]
-        }, {
-            title: "Rice",
-            optionItems: [{
-                name: "White Rice",
-                cost: 0
-            }, {
-                name: "Brown Rice",
-                cost: 1
-            }, {
-                name: "No Rice",
-                cost: 0
-            }]
-        }, {
-            title: "Spice",
-            optionItems: [{
-                name: "Mild",
-                cost: 0
-            }, {
-                name: "Medium",
-                cost: 0
-            }, {
-                name: "Spicy",
-                cost: 0
-            }]
-        }, {
-            title: "Add Extra",
-            optionItems: [{
-                name: "Tofu",
-                cost: 2
-            }, {
-                name: "Chicken",
-                cost: 2
-            }, {
-                name: "Pork",
-                cost: 2
-            }, {
-                name: "Beef",
-                cost: 2.50
-            }, {
-                name: "Shrimp",
-                cost: 3.50
-            }, {
-                name: "Egg",
-                cost: 1
-            }]
-        }, {
-            title: "Remove",
-            optionItems: [{
-                name: "No nuts",
-                cost: 0
-            }, {
-                name: "No bell peppers",
-                cost: 0
-            }, {
-                name: "No onions",
-                cost: 0
-            }, {
-                name: "No raisens",
-                cost: 0
-            }, {
-                name: "No cilantro",
-                cost: 0
-            }, {
-                name: "No egg",
-                cost: 0
-            }]
-        }]
-    }, {
         name: "Pad Pak Boong",
         price: "9.00",
         desc: "Flash stir fried morning glory, fresh Thai chili, garlic sauce (Seasonal)",
@@ -1193,50 +1101,6 @@ const menuData = {
             }, {
                 name: "No green beans",
                 cost: 0
-            }]
-        }]
-    }, {
-        name: "Kao Pad",
-        price: "10.00",
-        desc: "Fried rice, onions, egg, Chinese broccoli, tomatoes",
-        options: [{
-            title: "Rice",
-            optionItems: [{
-                name: "White Rice",
-                cost: 0
-            }, {
-                name: "Brown Rice",
-                cost: 1
-            }, {
-                name: "No Rice",
-                cost: 0
-            }]
-        }, {
-            title: "Spice",
-            optionItems: [{
-                name: "Medium",
-                cost: 0
-            }, {
-                name: "Spicy",
-                cost: 0
-            }]
-        }, {
-            title: "Add Extra",
-            optionItems: [{
-                name: "Tofu",
-                cost: 2
-            }, {
-                name: "Chicken",
-                cost: 2
-            }, {
-                name: "Pork",
-                cost: 2
-            }, {
-                name: "Beef",
-                cost: 2.50
-            }, {
-                name: "Shrimp",
-                cost: 3.50
             }]
         }]
     }],

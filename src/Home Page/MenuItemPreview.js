@@ -29,8 +29,8 @@ class MenuItemPreview extends Component {
     return (
       <li onMouseOut={this.previewMousedOut} onMouseOver={this.previewMousedOver} className="MenuItemPreview">
         <div style={ previewImgStyle } className="home-preview-image"></div>
-        <div className="home-preview-title">{this.state.title}</div>
-        <div className="home-preview-desc">{this.state.desc}</div>
+        <div className="home-preview-title">{this.props.itemData.title}</div>
+        <div className="home-preview-desc">{this.props.itemData.desc}</div>
       </li>
     );
   }

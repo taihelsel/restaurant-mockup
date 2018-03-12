@@ -8,34 +8,34 @@ class Home extends Component {
   constructor(props){
     super(props);
     this.state={
-      imageIndexes:[7,2,6,9,7,8],//Keeps record of the currently used images
+      imageIndexes:[8,3,6,10,1,9],//Keeps record of the currently used images
       img0:{
-        src : "images/appsides/7.jpeg",
+        src : "images/appsides/8.jpeg",
         desc : null,
         title : "Fried Egg",
       },
       img1:{
-        src : "images/appsides/2.jpeg",
+        src : "images/appsides/3.jpeg",
         desc :  "Fried Tofu with sweet chili sauce, crush peanuts",
         title : "Tao Hu Tod",
       },
       img2:{
         src : "images/appsides/6.jpeg",
         desc : null,
-        title : "Brown Rice",
+        title : "White Rice",
       },
       img3:{
-        src : "images/entree/9.jpeg",
+        src : "images/entree/10.jpeg",
         desc :  "Stir fried green beans with red curry paste, lime leaves, bell peppers",
-        title : "Pad Prik Khing",
+        title : "Pad Pik Khing",
       },
       img4:{
-        src :  "images/appsides/7.jpeg",
-        desc : null,
-        title :  "Fried Egg",
+        src :  "images/appsides/1.jpeg",
+        desc: 'Grill chicken on stick with peanut sauce, pickled cucumber and toast (5 sticks) (GF)',
+        title :  'Gai Sate',
       },
       img5:{
-        src : "images/entree/8.jpeg",
+        src : "images/entree/9.jpeg",
         desc: "Stir crispy choice of meat, cashew nuts, bell peppers, onions, chili sauce",
         title: "Pad Med Mamuang",
       },
@@ -46,8 +46,8 @@ class Home extends Component {
     const mealTypes = ["appsides","entree","soupsalad"];//Holds currently supported meal types
     let i = 0;
     this.interval = setInterval(()=>{
-      const mealIndex = Math.floor(Math.random() * (mealTypes.length-1)) + 0;
-      const mealItemIndexes = this.randomImg(1,menuData[mealTypes[mealIndex]].length - 2); 
+      const mealIndex = Math.floor(Math.random() * (mealTypes.length-1) + 0);
+      const mealItemIndexes = this.randomImg(0,menuData[mealTypes[mealIndex]].length - 1); 
       const menuItem1 = menuData[mealTypes[mealIndex]][mealItemIndexes[0]];
       const menuItem2 = menuData[mealTypes[mealIndex]][mealItemIndexes[1]];
       let newImages = this.state.imageIndexes;
@@ -56,7 +56,7 @@ class Home extends Component {
         this.setState({
           imageIndexes:newImages,
           ["img"+i] : {
-            src : "images/"+mealTypes[mealIndex]+"/"+mealItemIndexes[0]+".jpeg",
+            src : "images/"+mealTypes[mealIndex]+"/"+(mealItemIndexes[0]+1)+".jpeg",
             desc: menuItem1.desc,
             title:menuItem1.name,
           },
@@ -67,7 +67,7 @@ class Home extends Component {
         this.setState({
           imageIndexes:newImages,
           ["img"+(5-i)] : {
-            src : "images/"+mealTypes[mealIndex]+"/"+mealItemIndexes[1]+".jpeg",
+            src : "images/"+mealTypes[mealIndex]+"/"+(mealItemIndexes[1]+1)+".jpeg",
             desc:menuItem2.desc,
             title:menuItem2.name,
           },
