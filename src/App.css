@@ -152,6 +152,7 @@
 /*Menu Page stuff*/
 #Menu{
   margin-top:3em;
+  text-align: center;
 }
 #MenuNav{
   width:100%;
@@ -174,6 +175,55 @@
 #selected-menu-nav{
   border-bottom: 3px solid var(--red);
   color:var(--red);
+}
+#MenuItems{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 80%;
+  display: inline-block;
+  margin-top:2em;
+}
+.menu-item{
+  display: inline-block;
+  width: 24vmax;
+  height: 10vmax;
+  position: relative;
+  margin: 1vmax;
+}
+.menu-item-img{
+  width: 7vmax;
+  border-radius: 15em;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.menu-item-title{
+  display:inline-block;
+  position: absolute;
+  left: 7vmax;
+  top: 0;
+  font-size: 1.5vmax;
+  font-family: 'Passion One', cursive;
+  color: var(--red);
+}
+.menu-item-desc{
+  font-size: 1vmax;
+  top: 2vmax;
+  position: absolute;
+  width: 16.5vmax;
+  right: 0;
+  overflow: hidden;
+  height: 4.5vmax;
+}
+.menu-item-price{
+  display:inline-block;
+  font-size: 1.5vmax;
+  color: var(--red);
+  position: absolute;
+  right: 1vmax;
+  bottom: 1vmax;
+  font-family: 'Pacifico', cursive;
 }
 /*About Page stuff*/
 #About{
