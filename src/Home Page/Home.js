@@ -53,20 +53,26 @@ class Home extends Component {
       let newImages = this.state.imageIndexes;
       newImages[i]=mealItemIndexes[0];
       newImages[5-i]=mealItemIndexes[1];
-      this.setState({
-        imageIndexes:newImages,
-        ["img"+i] : {
-          src : "images/"+mealTypes[mealIndex]+"/"+mealItemIndexes[0]+".jpeg",
-          desc: menuItem1.desc,
-          title:menuItem1.name,
-        },
-        ["img"+(5-i)] : {
-          src : "images/"+mealTypes[mealIndex]+"/"+mealItemIndexes[1]+".jpeg",
-          desc:menuItem2.desc,
-          title:menuItem2.name,
-        },
-      });
-      console.log(this.state.imageIndexes)
+      if(document.getElementsByClassName("MenuItemPreview")[i].getAttribute("id") !=="hovered-home-preview"){
+        this.setState({
+          imageIndexes:newImages,
+          ["img"+i] : {
+            src : "images/"+mealTypes[mealIndex]+"/"+mealItemIndexes[0]+".jpeg",
+            desc: menuItem1.desc,
+            title:menuItem1.name,
+          },
+        });
+      }
+      if(document.getElementsByClassName("MenuItemPreview")[5-i].getAttribute("id") !=="hovered-home-preview"){
+        this.setState({
+          imageIndexes:newImages,
+          ["img"+(5-i)] : {
+            src : "images/"+mealTypes[mealIndex]+"/"+mealItemIndexes[1]+".jpeg",
+            desc:menuItem2.desc,
+            title:menuItem2.name,
+          },
+        });
+      }
       if(i >= 5){
         i=0;
       }else{
@@ -81,16 +87,25 @@ class Home extends Component {
       return [y,x];
     }
   }
+  setHover = (e) =>{
+    /*Set Identifier*/
+    e.currentTarget.setAttribute("id","hovered-home-preview");
+    console.log(e.currentTarget);
+  }
+  removeHover = (e) =>{
+    e.currentTarget.removeAttribute("id");
+    console.log(e.currentTarget);
+  }
   render() {
     return (
       <div id="Home">
         <ul className="home-menu-preview">
-          <MenuItemPreview itemData={this.state.img0}/>
-          <MenuItemPreview itemData={this.state.img1} />
-          <MenuItemPreview itemData={this.state.img2} />
-          <MenuItemPreview itemData={this.state.img3}/>
-          <MenuItemPreview itemData={this.state.img4}/>
-          <MenuItemPreview itemData={this.state.img5}/>
+          <MenuItemPreview onMouseOut={this.removeHover} onMouseOver={this.setHover} itemData={this.state.img0}/>
+          <MenuItemPreview onMouseOut={this.removeHover} onMouseOver={this.setHover} itemData={this.state.img1} />
+          <MenuItemPreview onMouseOut={this.removeHover} onMouseOver={this.setHover} itemData={this.state.img2} />
+          <MenuItemPreview onMouseOut={this.removeHover} onMouseOver={this.setHover} itemData={this.state.img3}/>
+          <MenuItemPreview onMouseOut={this.removeHover} onMouseOver={this.setHover} itemData={this.state.img4}/>
+          <MenuItemPreview onMouseOut={this.removeHover} onMouseOver={this.setHover} itemData={this.state.img5}/>
         </ul>
       </div>
     );

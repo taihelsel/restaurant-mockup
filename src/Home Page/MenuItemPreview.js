@@ -15,8 +15,8 @@ class MenuItemPreview extends Component {
     const previewImgStyle = {
         backgroundImage:"url("+require(".././"+src)+")",
     }
-     return (
-      <li className="MenuItemPreview">
+    return (
+      <li onMouseOut={this.props.onMouseOut} onMouseOver={this.props.onMouseOver} className="MenuItemPreview">
         <div style={ previewImgStyle } className="home-preview-image"></div>
         <div className="home-preview-title">{this.state.title}</div>
         <div className="home-preview-desc">{this.state.desc}</div>
