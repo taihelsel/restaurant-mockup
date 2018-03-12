@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../App.css';
 
 /*React Components*/
-import MenuItemPreview from './MenuItemPreview';
+import MenuItemPreview from './MenuItemPreview.js';
 import menuData from ".././menuData.js";
 class Home extends Component {
   constructor(props){

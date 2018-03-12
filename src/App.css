@@ -1,6 +1,7 @@
 :root {
   --black:#2E2E2E;
   --lightgrey:#d3d3d3;
+  --red:#bd262b;
 }
 
 .App{
@@ -150,7 +151,29 @@
 }
 /*Menu Page stuff*/
 #Menu{
-
+  margin-top:3em;
+}
+#MenuNav{
+  width:100%;
+  margin:0;
+  padding:0;
+  text-align: center;
+}
+.menu-nav-items{
+  display: inline-block;
+  color: grey;
+  background-color: white;
+  width: 13vmax;
+  height: 100%;
+  cursor: pointer;
+  font-size: 1.6vmax;
+  font-family: 'Lobster', cursive;
+  padding:1vmax;
+  border-bottom: 3px solid var(--lightgrey);
+}
+#selected-menu-nav{
+  border-bottom: 3px solid var(--red);
+  color:var(--red);
 }
 /*About Page stuff*/
 #About{
