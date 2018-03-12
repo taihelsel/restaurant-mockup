@@ -19,6 +19,7 @@
   left:0;
   width:100%;
   background-color:white;
+  z-index: 1000;
 }
 .nav-logo{
   display: inline-block;
@@ -63,20 +64,23 @@
 }
 /*Home Page stuff*/
 #Home{
-
+  margin-top:5vmax;
 }
 .home-menu-preview{
   list-style:none;
   padding:0;
   margin:0;
+  height:50vmax;
+  overflow: hidden;
 }
 .MenuItemPreview{
   display: inline-block;
   width: 16.66%;
-  height: 75vmax;
+  height: 100%;
   -webkit-transition: width .2s ease-in-out;
+  -o-transition: width .2s ease-in-out;
   transition: width .2s ease-in-out;
-  background-color:white;
+  background-color: white;
 }
 .home-preview-image{
   width: 100%;
@@ -95,6 +99,14 @@
 }
 .home-preview-desc{
 
+}
+.home-preview-image:hover{
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+  transform: scale(1.2);
 }
 /*Menu Page stuff*/
 #Menu{
