@@ -95,6 +95,7 @@
 }
 .home-preview-title,.home-preview-desc{
   display: none;
+  user-select: none;
 }
 .home-preview-title{
   position: absolute;
@@ -108,7 +109,6 @@
   border-bottom-color: snow;
   border-bottom-width: 2px;
   padding-bottom:10px;
-  z-index: 2;
 }
 .home-preview-desc{
   position: absolute;
@@ -118,9 +118,8 @@
   text-align: center;
   color: snow;
   text-shadow: 1px 0px #afafaf;
-  z-index: 2;
 }
-.home-preview-image:hover{
+.MenuItemPreview:hover .home-preview-image{
   -webkit-filter: blur(3px);
   -moz-filter: blur(3px);
   -o-filter: blur(3px);
