@@ -52,7 +52,7 @@ class Home extends Component {
       const menuItem2 = menuData[mealTypes[mealIndex]][mealItemIndexes[1]];
       let newImages = this.state.imageIndexes;
       if(document.getElementsByClassName("MenuItemPreview")[i].getAttribute("id") !=="hovered-home-preview"){
-        newImages[i]=mealItemIndexes[0];
+        newImages[i]=mealItemIndexes[0]+1;
         this.setState({
           imageIndexes:newImages,
           ["img"+i] : {
@@ -63,7 +63,7 @@ class Home extends Component {
         });
       }
       if(document.getElementsByClassName("MenuItemPreview")[5-i].getAttribute("id") !=="hovered-home-preview"){
-        newImages[5-i]=mealItemIndexes[1];
+        newImages[5-i]=mealItemIndexes[1]+1
         this.setState({
           imageIndexes:newImages,
           ["img"+(5-i)] : {
