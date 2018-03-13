@@ -190,6 +190,7 @@
   height: 10vmax;
   position: relative;
   margin: 1vmax;
+  cursor: pointer;
 }
 .menu-item-img{
   width: 7vmax;
@@ -227,5 +228,11 @@
 }
 /*About Page stuff*/
 #About{
-
+  text-align: center;
+}
+#Slideshow{
+  width: 45vmax;
+  height: 30vmax;
+  display: inline-block;
+  border: 1px solid var(--lightgrey);
 }

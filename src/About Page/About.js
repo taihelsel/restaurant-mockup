@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
 import '../App.css';
+
+/*React components*/
+import Slideshow from './Slideshow.js';
+
 class About extends Component {
   render() {
     return (
       <div id="About">
-        <div>React About Page</div>
+        <Slideshow />
+        <div className="owner-quote-wrapper">
+          <img className="owner-image" />
+          
+        </div>
       </div>
     );
   }
