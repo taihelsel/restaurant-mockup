@@ -229,10 +229,30 @@
 /*About Page stuff*/
 #About{
   text-align: center;
+  margin-top:10vmax;
 }
 #Slideshow{
   width: 45vmax;
   height: 30vmax;
   display: inline-block;
   border: 1px solid var(--lightgrey);
+}
+.owner-quote-wrapper{
+  margin-top:2em;
+}
+.owner-quote{
+  display: inline-block;
+  width: 22vmax;
+  font-size: 1.5vmax;
+  bottom: 4vmax;
+  position: relative;
+}
+.owner-quote::after { 
+  font-size:1.2vmax;
+  content: " - Poe Wongpa, Owner";
+}
+.owner-image{
+  border-radius: 5px;
+  width: 10vmax;
+  display: inline-block;
 }
