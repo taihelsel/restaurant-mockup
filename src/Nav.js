@@ -12,6 +12,7 @@ class Nav extends Component {
         <li onClick={this.changeNav} id="nav-home" className="nav-item selected-nav-item"><a href="#Home">Home</a></li>
         <li onClick={this.changeNav} id="nav-menu" className="nav-item"><a href="#Menu">Menu</a></li>
         <li onClick={this.changeNav} id="nav-about" className="nav-item"><a href="#About">About</a></li>
+        <li onClick={this.changeNav} id="nav-contact" className="nav-item"><a href="#Contact">Contact</a></li>
       </ul>
     );
   }

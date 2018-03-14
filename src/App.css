@@ -151,8 +151,10 @@
 }
 /*Menu Page stuff*/
 #Menu{
-  margin-top:3em;
+  margin-top: 3em;
   text-align: center;
+  height: 70vmax;
+  overflow: hidden;
 }
 #MenuNav{
   width:100%;
@@ -229,11 +231,12 @@
 /*About Page stuff*/
 #About{
   text-align: center;
-  margin-top:10vmax;
+  margin-top:2vmax;
+  height:62vmax;
 }
 #Slideshow{
-  width: 45vmax;
-  height: 30vmax;
+  width: 70vmax;
+  height: 35vmax;
   display: inline-block;
   border: 1px solid var(--lightgrey);
 }
@@ -255,4 +258,8 @@
   border-radius: 5px;
   width: 10vmax;
   display: inline-block;
+}
+/*Contact Page*/
+#Contact{
+
 }
