@@ -14,7 +14,7 @@ class App extends Component {
       const menu = document.getElementById("Menu");
       const about = document.getElementById("About");
       const contact = document.getElementById("Contact")
-      window.addEventListener("scroll",function(){
+      window.addEventListener("scroll",()=>{
           const offset = 500; //Will be the "breakpoint" for setting the active tab
           //Getting position of the bottom (y axis)
           const home_bottom = home.getBoundingClientRect().bottom;
@@ -27,13 +27,13 @@ class App extends Component {
               setActive(0);
           }else if(menu_bottom > offset){
               setActive(1);
-          }else if(about_bottom > 600){
+          }else if(about_bottom > 600){ /* 600 is the custom breakpoint for the contact page*/
               setActive(2);
           }else{
               setActive(3);
           }
       })
-      function setActive(n){
+      const setActive = (n) => {
           document.getElementsByClassName("selected-nav-item")[0].classList.remove("selected-nav-item");
           document.getElementsByClassName("nav-item")[n].classList.add("selected-nav-item");
       }
