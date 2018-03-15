@@ -15,19 +15,22 @@ class App extends Component {
       const about = document.getElementById("About");
       const contact = document.getElementById("Contact")
       window.addEventListener("scroll",function(){
-          const offset = 200; //Will be the "breakpoint" for setting the active tab
+          const offset = 500; //Will be the "breakpoint" for setting the active tab
           //Getting position of the bottom (y axis)
           const home_bottom = home.getBoundingClientRect().bottom;
           const menu_bottom = menu.getBoundingClientRect().bottom;
           const about_bottom = about.getBoundingClientRect().bottom;
           const contact_bottom = contact.getBoundingClientRect().bottom;
+          console.log(about_bottom);;
           //checking bottom position
           if(home_bottom>offset){
               setActive(0);
           }else if(menu_bottom > offset){
               setActive(1);
-          }else if(about_bottom > offset){
+          }else if(about_bottom > 600){
               setActive(2);
+          }else{
+              setActive(3);
           }
       })
       function setActive(n){
