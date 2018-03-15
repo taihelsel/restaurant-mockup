@@ -261,5 +261,28 @@
 }
 /*Contact Page*/
 #Contact{
-
+  position: relative;
+  width: 100%;
+  height: 30vmax;
+  text-align: center;
+}
+.contact-location,.contact-hours,.contact-info{
+  display: inline-grid;
+  list-style: none;
+  padding:0;
+  margin:0;
+  text-align: center;
+  margin:0 6vmax;
+}
+.contact-label{
+  font-size: 2vmax;
+  font-weight: bold;
+  border-bottom:3px solid var(--black);
+  padding-bottom:5px;
+}
+.contact-item{
+  margin-top:2vmax;
+}
+.contact-item a{
+  text-decoration: none;
 }
