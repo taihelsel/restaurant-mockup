@@ -5,6 +5,7 @@ class Nav extends Component {
     document.getElementsByClassName("selected-nav-item")[0].classList.remove("selected-nav-item");
     e.currentTarget.classList.add("selected-nav-item");
   }
+  
   render() {
     return (
       <ul id="Nav">
