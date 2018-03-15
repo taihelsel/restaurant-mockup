@@ -21,7 +21,6 @@ class App extends Component {
           const menu_bottom = menu.getBoundingClientRect().bottom;
           const about_bottom = about.getBoundingClientRect().bottom;
           const contact_bottom = contact.getBoundingClientRect().bottom;
-          console.log(about_bottom);;
           //checking bottom position
           if(home_bottom>offset){
               setActive(0);
