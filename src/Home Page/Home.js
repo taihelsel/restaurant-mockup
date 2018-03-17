@@ -41,6 +41,7 @@ class Home extends Component {
       },
     }
   }
+  
   componentDidMount = () =>{
     const intervalTimer = 2500;
     const mealTypes = ["appsides","entree","soupsalad"];//Holds currently supported meal types

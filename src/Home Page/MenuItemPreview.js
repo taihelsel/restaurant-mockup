@@ -9,6 +9,10 @@ class MenuItemPreview extends Component {
           title : this.props.itemData.title,
       }
   }
+  componentWillMount = () =>{
+    let img = new Image();
+    img.src = require(".././"+this.props.itemData.src);
+  }
   previewMousedOver = (e) =>{
     e.currentTarget.getElementsByClassName("home-preview-title")[0].style.display="inline-block";
     e.currentTarget.getElementsByClassName("home-preview-desc")[0].style.display="inline-block";

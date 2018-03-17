@@ -7,8 +7,6 @@ import Home from "./Home Page/Home.js";
 import Menu from "./Menu Page/Menu.js";
 import About from "./About Page/About.js";
 import Contact from "./Contact Page/Contact.js";
-/*Scripts*/
-import menuData from "./menuData.js";
 class App extends Component {
     componentDidMount = () => {
         this.onScroll();
