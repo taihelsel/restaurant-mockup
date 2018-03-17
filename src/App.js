@@ -10,27 +10,8 @@ import Contact from "./Contact Page/Contact.js";
 /*Scripts*/
 import menuData from "./menuData.js";
 class App extends Component {
-    constructor(props) {
-        super(props)
-        this.state = { imagesLoaded: false }
-    }
     componentDidMount = () => {
         this.onScroll();
-    }
-    componentWillMount = () => {
-        let offset = 0;
-        const mealTypes = ["appsides", "soupsalad", "entree"]
-        while (offset < mealTypes.length) {
-            for (let i = 1; i < menuData[mealTypes[offset]].length; i++) {
-                let img = new Image();
-                img.onload = () => {
-                    img.src = "./images/" + mealTypes[offset] + "/" + i + ".jpeg";
-                }
-                console.log("image cached");
-            }
-            offset++;
-        }
-        this.setState({ imagesLoaded: true })
     }
     onScroll = () => {
         //Setting each section to a variable
@@ -63,7 +44,6 @@ class App extends Component {
     }
     render() {
         return (
-            this.state.imagesLoaded ?
                 <div className="App">
                     <Nav />
                     <Home />
@@ -71,7 +51,7 @@ class App extends Component {
                     <About />
                     <Contact />
                 </div>
-                : <div></div>);
+        );
     }
 }
 
