@@ -51,9 +51,11 @@ class Home extends Component {
       const menuItem1 = menuData[mealTypes[mealIndex]][mealItemIndexes[0]];
       const menuItem2 = menuData[mealTypes[mealIndex]][mealItemIndexes[1]];
       let newImages = this.state.imageIndexes;
+      let img = new Image();
+      img.src = require(".././images/"+mealTypes[mealIndex]+"/"+(mealItemIndexes[0]+1)+".jpeg");
+      img.onload = () =>{
       if(document.getElementsByClassName("MenuItemPreview")[i].getAttribute("id") !=="hovered-home-preview"){
         newImages[i]= (mealItemIndexes[0]+1);
-        this.cacheImg("images/"+mealTypes[mealIndex]+"/"+(mealItemIndexes[0]+1)+".jpeg");
         this.setState({
           imageIndexes:newImages,
           ["img"+i] : {
@@ -62,10 +64,12 @@ class Home extends Component {
             title:menuItem1.name,
           },
         });
-      }
+      }}
+      let img2 = new Image();
+      img2.src = require(".././images/"+mealTypes[mealIndex]+"/"+(mealItemIndexes[1]+1)+".jpeg");
+      img2.onload = () =>{
       if(document.getElementsByClassName("MenuItemPreview")[5-i].getAttribute("id") !=="hovered-home-preview"){
         newImages[5-i]= (mealItemIndexes[1]+1);
-        this.cacheImg("images/"+mealTypes[mealIndex]+"/"+(mealItemIndexes[1]+1)+".jpeg");
         this.setState({
           imageIndexes:newImages,
           ["img"+(5-i)] : {
@@ -74,7 +78,7 @@ class Home extends Component {
             title:menuItem2.name,
           },
         });
-      }
+      }}
       if(i >= 5){
         i=0;
       }else{
@@ -82,12 +86,6 @@ class Home extends Component {
       }
     },intervalTimer);
   }
-  cacheImg = (path) => {
-      let img = new Image();
-      img.onload = () =>{
-        img.src = path;
-      }
-    }
   randomImg = (min,max,y=null,x=null) =>{
     if(y === x|| y===null || x===null || this.state.imageIndexes.indexOf(y+1) !== -1 || this.state.imageIndexes.indexOf(x+1) !== -1){
       return this.randomImg(min,max, Math.floor(Math.random() * max) + min, Math.floor(Math.random() * max) + min);
