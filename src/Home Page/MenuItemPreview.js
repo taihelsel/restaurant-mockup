@@ -4,6 +4,7 @@ class MenuItemPreview extends Component {
   constructor(props){
       super(props);
       this.state = {
+          initialImageCached:false,
           src : this.props.itemData.src,
           desc : this.props.itemData.desc,
           title : this.props.itemData.title,
@@ -12,6 +13,11 @@ class MenuItemPreview extends Component {
   componentWillMount = () =>{
     let img = new Image();
     img.src = require(".././"+this.props.itemData.src);
+    img.onload = () =>{
+      this.setState({
+        initialImageCached:true,
+      })
+    }
   }
   previewMousedOver = (e) =>{
     e.currentTarget.getElementsByClassName("home-preview-title")[0].style.display="inline-block";
@@ -31,11 +37,13 @@ class MenuItemPreview extends Component {
         backgroundImage:"url("+require(".././"+src)+")",
     }
     return (
+      this.state.initialImageCached?
       <li onMouseOut={this.previewMousedOut} onMouseOver={this.previewMousedOver} className="MenuItemPreview">
         <div style={ previewImgStyle } className="home-preview-image"></div>
         <div className="home-preview-title">{this.props.itemData.title}</div>
         <div className="home-preview-desc">{this.props.itemData.desc}</div>
       </li>
+      :<div>{/*Add loading image here*/}</div>
     );
   }
 }

@@ -284,3 +284,35 @@
 .contact-item a{
   text-decoration: none;
 }
+
+/*Mobile Stuff*/
+@media only screen and (max-width : 755px) {
+  /*Nav*/
+  #Nav{
+
+  }
+  /*Home*/
+  .home-text{
+    font-size: 10vmin;
+    top: 24vmin;
+  }
+  .home-menu-preview{
+    height: 64vmin;
+  }
+  .home-preview-title{
+
+  }
+  .home-preview-desc{
+    font-size: 2.4vmin;
+    top:35vmin;
+  }
+  /*Menu*/
+  .menu-nav-items{
+    padding: 16vmin 10vmin;
+    width: 24vmin;
+    border-bottom: none;
+    background-color: var(--lightgrey);
+    margin: 5vmin 3vmin;
+    color: var(--red);
+  }
+}
