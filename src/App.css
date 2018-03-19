@@ -281,6 +281,7 @@
 }
 .contact-item a{
   text-decoration: none;
+  color:var(--black);
 }
 
 /*Mobile Stuff*/
