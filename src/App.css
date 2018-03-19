@@ -321,5 +321,11 @@
     width: 30vw;
     height: 8vw;
     text-align: left;
+  }  
+  /*About*/
+
+  /*Contact*/
+  #Contact ol{
+    margin:4vmin 7vmin;
   }
 }
