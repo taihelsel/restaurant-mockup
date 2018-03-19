@@ -290,6 +290,12 @@
   #Nav{
 
   }
+  .nav-logo{
+    left: 6vmin;
+  }
+  .nav-item:last-child{
+    margin-right:1vmin;
+  }
   /*Home*/
   .home-text{
     font-size: 10vmin;
