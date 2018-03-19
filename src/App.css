@@ -310,7 +310,8 @@
     width:100%;
   }
   .menu-nav-items{
-
+    width:11vmax;
+    padding:1vmax 0;
   }
   .menu-item{
     width: 47vmin;
