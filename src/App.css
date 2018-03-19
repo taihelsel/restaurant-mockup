@@ -151,8 +151,6 @@
 /*Menu Page stuff*/
 #Menu{
   text-align: center;
-  height: 70vmax;
-  overflow: hidden;
 }
 #MenuNav{
   margin-top:6vmax;
@@ -307,12 +305,21 @@
     top:35vmin;
   }
   /*Menu*/
+  #MenuItems{
+    width:100%;
+  }
   .menu-nav-items{
-    padding: 16vmin 10vmin;
-    width: 24vmin;
-    border-bottom: none;
-    background-color: var(--lightgrey);
-    margin: 5vmin 3vmin;
-    color: var(--red);
+
+  }
+  .menu-item{
+    width: 47vmin;
+    height: 19vmin;
+    margin: 2vmin 1vmin;
+  }
+  .menu-item-desc{
+    font-size: 2vmin;
+    width: 30vw;
+    height: 8vw;
+    text-align: left;
   }
 }
