@@ -323,9 +323,14 @@
     text-align: left;
   }  
   /*About*/
-
+  #Slideshow{
+    width:97vmin;
+  }
   /*Contact*/
+  #Contact{
+    height:fit-content;
+  }
   #Contact ol{
-    margin:4vmin 7vmin;
+    margin: 7vmin 2vmin;
   }
 }
